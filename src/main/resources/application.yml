@@ -1,0 +1,15 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: accounts
+  profiles:
+    active: production
+  datasource:
+    url: ${kodilla_accounts.datasource.url}
+    username: ${kodilla_accounts.datasource.username}
+    password: ${kodilla_accounts.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${kodilla_accounts.datasource.ddl-mode}
