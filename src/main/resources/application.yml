@@ -13,3 +13,19 @@ spring:
   jpa:
     hibernate:
       ddl-auto: ${kodilla_accounts.datasource.ddl-mode}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  app:
+    name: "accounts"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
+eureka:
+  client: ${eureka-client}
+application:
+  allow-get-accounts: ${kodilla_accounts.allow-get-accounts}
